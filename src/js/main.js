@@ -52,6 +52,8 @@ function handleUntilBtn(untilID) {
         addNewTaskUI(task.name, task.dueDate.toDateString(), todoList.projects[task.projectID].name, task.completed)
     })
 
+    taskListContainer.dataset.count = tasks.length
+
 }
 function handleProjectBtn(projectID) {
     removeAllChildren(taskListContainer)
@@ -60,6 +62,8 @@ function handleProjectBtn(projectID) {
     tasks.forEach(task => {
         addNewTaskUI(task.name, task.dueDate.toDateString(), todoList.projects[projectID].name, task.completed)
     })
+    taskListContainer.dataset.count = tasks.length
+
 }
 
 function handleDueClick(btn) {

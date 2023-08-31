@@ -4,7 +4,12 @@ export default {
 
 
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        nothingHere:'url("/nothing-here.png")'
+
+      }
+    },
   },
   plugins: [],
 }
