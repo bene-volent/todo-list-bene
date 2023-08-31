@@ -33,7 +33,7 @@ class TodoProject {
 }
 
 class TodoTask {
-    constructor(name, ID, projectID, dueDate,completed=false) {
+    constructor(name, ID, projectID, dueDate, completed = false) {
         this.name = name
         this.projectID = projectID
         this.ID = ID
@@ -82,7 +82,7 @@ class TodoList {
 
         return true
     }
-    addTodoTask(name, projectName, dueDate,completed=false) {
+    addTodoTask(name, projectName, dueDate, completed = false) {
 
         const projectToken = TodoProject.getProjectToken(projectName)
 
@@ -95,7 +95,7 @@ class TodoList {
             return false
         }
 
-        this.tasks[taskToken] = new TodoTask(name, taskToken, projectToken, dueDate,completed)
+        this.tasks[taskToken] = new TodoTask(name, taskToken, projectToken, dueDate, completed)
         this.projects[projectToken].addTask(taskToken)
         return true
     }
@@ -184,15 +184,16 @@ class TodoList {
 
     getFromLocalStorage() {
         let data = getFromLocalStorage("benes-todolist")
-        console.log(data)
 
-        for (let projectKey in data.projects) {
-            let project = data.projects[projectKey]
-            this.addProject(project.name)
-        }
-        for (let taskKey in data.tasks) {
-            let task = data.tasks[taskKey]
-            this.addTodoTask(task.name, this.projects[task.projectID].name, task.dueDate,task.completed)
+        if (data) {
+            for (let projectKey in data.projects) {
+                let project = data.projects[projectKey]
+                this.addProject(project.name)
+            }
+            for (let taskKey in data.tasks) {
+                let task = data.tasks[taskKey]
+                this.addTodoTask(task.name, this.projects[task.projectID].name, task.dueDate, task.completed)
+            }
         }
 
     }
