@@ -317,4 +317,3 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-console.log(todoList)
