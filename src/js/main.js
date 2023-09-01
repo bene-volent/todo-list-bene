@@ -316,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    document.querySelector("[data-name='This month'][data-until='2']").click()
+    document.querySelector("[data-name='Today'][data-until='0']").click()
     console.log("Data Loaded From Local Storage!")
 
 })
