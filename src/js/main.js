@@ -155,7 +155,7 @@ function addNewProjectUI(name = "Project") {
     buttonToSelect.push(button)
     button.addEventListener("click", () => handleDueClick(button))
 
-
+    
 
 }
 
@@ -212,7 +212,7 @@ function addNewTaskUI(name, dueDate, projectName, completed = false) {
 
     taskListContainer.append(taskContainer)
 
-
+    taskListContainer.dataset.count = parseInt(taskListContainer.dataset.count) +1 
 
 }
 
