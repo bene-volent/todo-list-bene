@@ -9,14 +9,14 @@
 </head>
 
 <body>
-  <div id="app" class="app | bg-neutral-950 text-slate-50">
+  <div id="app" class="app |  bg-neutral-50 dark:bg-neutral-950 dark:text-slate-50 text-slate-950">
     <header class="header | py-">
       <div class=" | container mx-auto px-6 py-3 | flex justify-between items-center">
         <div class="logo | flex gap-4">
-          <button type="button" class="hamburger | w-10 focus-visible:outline-slate-50 md:hidden" data-open="false">
+          <button type="button" class="hamburger | w-10 focus-visible:outline-slate-950 dark:focus-visible:outline-slate-50 md:hidden" data-open="false">
             <span class="sr-only">Open Menu</span>
-            <span class="hamburger-top | bg-slate-50"></span>
-            <span class="hamburger-bottom | bg-slate-50"></span>
+            <span class="hamburger-top | bg-slate-950 dark:bg-slate-50"></span>
+            <span class="hamburger-bottom | bg-slate-950 dark:bg-slate-50"></span>
           </button>
           <h1 class="brand | ">
             <img src="/TodoListIcon.png" alt="" class="h-14">
@@ -39,37 +39,37 @@
         </nav>
       </div>
     </header>
-    <main class="main | bg-neutral-900 relative md:flex">
+    <main class="main | bg-neutral-100 dark:bg-neutral-900 relative md:flex">
       <div
-        class="sidebar | bg-neutral-800 flex flex-col gap-6 absolute z-10 top-0 left-0 h-full w-full max-w-xs py-6 -translate-x-full data-[open=true]:translate-x-0 transition-transform ease-in-out duration-[350ms] md:translate-x-0 md:static md:top-auto md:left-auto"
+        class="sidebar | bg-neutral-200 dark:bg-neutral-800 flex flex-col gap-6 absolute z-10 top-0 left-0 h-full w-full max-w-xs py-6 -translate-x-full data-[open=true]:translate-x-0 transition-transform ease-in-out duration-[350ms] md:translate-x-0 md:static md:top-auto md:left-auto"
         data-open="false">
         <div class="duration-container | px-6 ">
-          <h2 class="duration-heading | text-xl border-b">Due until</h2>
+          <h2 class="duration-heading | text-xl border-b border-b-slate-950 dark:border-b-slate-50">Due until</h2>
           <ul class="duration-button-container | ">
             <li>
               <div type="button"
-                class="duration selected | w-full py-1 px-4 mt-2  rounded text-start text-lg data-[selected=true]:bg-neutral-500 cursor-pointer" data-name="Today" data-until="0">Today</div>
+                class="duration selected | w-full py-1 px-4 mt-2  rounded text-start text-lg data-[selected=true]:bg-neutral-300 dark:data-[selected=true]:bg-neutral-500 cursor-pointer" data-name="Today" data-until="0">Today</div>
             </li>
             <li>
               <div type="button"
-                class="duration selected | w-full py-1 px-4 mt-2 rounded text-start text-lg data-[selected=true]:bg-neutral-500 cursor-pointer" data-name="This week" data-until="1">This
+                class="duration selected | w-full py-1 px-4 mt-2 rounded text-start text-lg data-[selected=true]:bg-neutral-300 dark:data-[selected=true]:bg-neutral-500 cursor-pointer" data-name="This week" data-until="1">This
                 Week</div>
             </li>
             <li>
               <div type="button"
-                class="duration selected | w-full py-1 px-4 mt-2 rounded text-start text-lg data-[selected=true]:bg-neutral-500  cursor-pointer" data-name="This month" data-until="2">This
+                class="duration selected | w-full py-1 px-4 mt-2 rounded text-start text-lg data-[selected=true]:bg-neutral-300 dark:data-[selected=true]:bg-neutral-500 cursor-pointer" data-name="This month" data-until="2">This
                 Month</div>
             </li>
           </ul>
         </div>
 
         <div class="projects-container | px-6 overflow-hidden " data-count="0">
-          <h2 class="projects-heading | text-xl border-b">
+          <h2 class="projects-heading | text-xl border-b border-b-slate-950 dark:border-b-slate-50">
             Projects
           </h2>
           <ul class="projects-button-container | pb-2 max-h-full overflow-auto">
 
-            <li class=" | sticky top-0 py-1 bg-neutral-800">
+            <li class=" | sticky top-0 py-1 bg-neutral-200 dark:bg-neutral-800">
               <button type="button"
                 class="projects-addNew | flex items-center gap-2 w-full py-1 px-4 mt-2 rounded text-start text-lg  ">
                 <iconify-icon class="text-2xl" icon="mdi:plus"></iconify-icon>
@@ -82,7 +82,7 @@
       </div>
       <div class="content | relative flex-1 w-full h-full p-8">
         <button type="button"
-          class="content-addNewTask | fixed right-6 bottom-20 landscape:bottom-6 lg:landscape:bottom-20 flex items-center gap-2 py-4 px-4 mt-2  rounded-full md:rounded-xl text-start text-lg bg-black active:translate-y-[2px] active:bg-neutral-950">
+          class="content-addNewTask | fixed right-6 bottom-20 landscape:bottom-6 lg:landscape:bottom-20 flex items-center gap-2 py-4 px-4 mt-2  rounded-full md:rounded-xl text-start text-lg bg-slate-300 shadow-md dark:bg-black active:translate-y-[2px] active:bg-neutral-200 dark:active:bg-neutral-950">
           <iconify-icon class="text-2xl" icon="mdi:plus"></iconify-icon>
           <span class="sr-only md:not-sr-only">Add New Task</span>
         </button>
@@ -104,23 +104,23 @@
   </div>
 
   <dialog
-    class="modal addNewProject | bg-neutral-800 text-neutral-50 w-[calc(100vw-3rem)]  max-w-lg rounded-md  backdrop:backdrop-blur backdrop:bg-white backdrop:bg-opacity-20  sm:w-full">
-    <h2 class="text-2xl text-center py-2 border-b border-b-neutral-50">Add New Project</h2>
+    class="modal addNewProject | bg-neutral-200 dark:bg-neutral-800 text-neutral-950 dark:text-neutral-50 w-[calc(100vw-3rem)]  max-w-lg rounded-md  backdrop:backdrop-blur backdrop:bg-slate-900 dark:backdrop:bg-white backdrop:bg-opacity-20  sm:w-full">
+    <h2 class="text-2xl text-center py-2 border-b border-b-neutral-950 dark:border-b-neutral-50">Add New Project</h2>
     <form class="form-addNewProject grid grid-rows-2 p-3 gap-3 " method="dialog">
       <input
         class="w-full p-3 rounded  border-b-black border-b-2 bg-neutral-50 text-neutral-950 text-lg outline-none focus-visible:outline-gray-500"
         type="text" name="projectName" placeholder="Project Name">
       <div class="button-group flex gap-2  font-bold">
         <button type="submit" formmethod="post"
-          class="form-addNewProject-submit flex-1 p-2 rounded bg-neutral-50 text-neutral-800">Add New</button>
+          class="form-addNewProject-submit flex-1 p-2 rounded bg-neutral-950 dark:bg-neutral-50 text-neutral-200 dark:text-neutral-800">Add New</button>
         <button type="submit" formmethod="dialog"
-          class="form-addNewProject-close flex-1 p-2 rounded border-neutral-50 border">Cancel</button>
+          class="form-addNewProject-close flex-1 p-2 rounded border-neutral-950 dark:border-neutral-50 border">Cancel</button>
       </div>
     </form>
   </dialog>
   <dialog
-    class="modal addNewTask | bg-neutral-800 text-neutral-50 w-[calc(100vw-3rem)] max-w-lg rounded-md   backdrop:backdrop-blur backdrop:bg-white backdrop:bg-opacity-20  sm:w-full">
-    <h2 class="text-2xl text-center py-2 border-b border-b-neutral-50">Add Task</h2>
+    class="modal addNewTask | bg-neutral-200 dark:bg-neutral-800 text-neutral-950 dark:text-neutral-50 w-[calc(100vw-3rem)]  max-w-lg rounded-md  backdrop:backdrop-blur backdrop:bg-slate-900 dark:backdrop:bg-white backdrop:bg-opacity-20  sm:w-full">
+    <h2 class="text-2xl text-center py-2 border-b border-b-neutral-950 dark:border-b-neutral-50">Add Task</h2>
     <form class="form-addNewTask flex flex-col p-3 gap-3 " method="dialog">
       <input
         class="w-full   border-b-black border-b-2 p-3 rounded bg-neutral-50 text-neutral-950 text-lg outline-none focus-visible:outline-gray-500"
@@ -138,9 +138,9 @@
       </div>
       <div class="button-group flex gap-2  font-bold">
         <button type="submit" formmethod="post"
-          class="form-addNewTask-submit flex-1 p-2 rounded bg-neutral-50 text-neutral-800">Add New</button>
+          class="form-addNewTask-submit flex-1 p-2 rounded bg-neutral-950 dark:bg-neutral-50 text-neutral-200 dark:text-neutral-800">Add New</button>
         <button type="submit" formmethod="dialog"
-          class="form-addNewTask-close flex-1 p-2 rounded border-neutral-50 border">Cancel</button>
+          class="form-addNewTask-close flex-1 p-2 rounded border-neutral-950 dark:border-neutral-50 border">Cancel</button>
       </div>
     </form>
   </dialog>

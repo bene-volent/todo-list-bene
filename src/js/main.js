@@ -127,7 +127,7 @@ function addNewProjectUI(name = "Project") {
 
     let listItem = document.createElement("li")
     let button = document.createElement("div")
-    button.className = "project selected | w-full py-1 px-4 mt-2 rounded flex items-center justify-between data-[selected=true]:bg-neutral-500 data-[selected=true]:font-bold cursor-pointer capitalize"
+    button.className = "project selected | w-full py-1 px-4 mt-2 rounded flex items-center justify-between data-[selected=true]:bg-neutral-300 dark:data-[selected=true]:bg-neutral-500 data-[selected=true]:font-bold cursor-pointer capitalize"
     button.dataset.id = projectID
     button.dataset.name = capitalize(name)
 
@@ -177,12 +177,12 @@ function addProjectToOptions(projectName) {
 function addNewTaskUI(name, dueDate, projectName, completed = false) {
     const taskID = TodoTask.getTaskToken(name, projectName)
     let taskContainer = document.createElement("div")
-    taskContainer.className = "task | flex items-center gap-4 text-lg py-3 px-5 rounded-md bg-neutral-600"
+    taskContainer.className = "task | flex items-center gap-4 text-lg py-3 px-5 rounded-md bg-neutral-300 dark:bg-neutral-600"
     taskContainer.dataset.id = taskID
 
     const taskCompleted = document.createElement("button")
     taskCompleted.type = "button"
-    taskCompleted.className = "task-completed | h-5 rounded-full aspect-square border-2 border-neutral-50 bg-neutral-900 hover:data-[completed=false]:bg-neutral-600"
+    taskCompleted.className = "task-completed | h-5 rounded-full aspect-square border-2 border-neutral-950 dark:border-neutral-50 "
     taskCompleted.dataset.completed = completed
     taskCompleted.innerHTML = '<span class="sr-only" > Not Completed</span >'
 
@@ -316,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    document.querySelector("[data-name='Today'][data-until='0']").click()
+    document.querySelector("[data-name='This month'][data-until='2']").click()
     console.log("Data Loaded From Local Storage!")
 
 })

@@ -69,7 +69,12 @@
 }
 
 .task-completed[data-completed="true"]{
-  background-color: #f0f0f0;
+  background-color: #0f0f0f;
+}
+@media (prefers-color-scheme: dark) {
+  .task-completed[data-completed="true"]{
+    background-color: #f0f0f0;
+  }
 }
 
 .task-completed[data-completed="true"] ~ .task-name{
