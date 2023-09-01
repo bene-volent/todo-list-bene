@@ -97,6 +97,7 @@ function deleteTask(taskID) {
         taskUI.remove()
     }
     todoList.saveInLocalStorage()
+    taskListContainer.dataset.count = parseInt(taskListContainer.dataset.count)-1
 }
 
 function deleteProject(projectID) {
